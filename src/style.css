@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
 
 }
@@ -14,13 +18,15 @@ h1 {
 }
 
 img {
-  width: 500px;
+  max-width: 500px;
   
 }
 
 header {
   background-color: #0891B2;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 header .wrapper {
@@ -33,6 +39,7 @@ header .wrapper {
 .about {
   background-color: #FFFFFF;
   font-size: 1.2rem;
+  padding: 2rem;
 }
 
 .social-icons {
@@ -44,12 +51,27 @@ header .wrapper {
 
 main {
   padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+main img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  
 }
 
 .projects {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.card {
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.4);
+  flex: 1 1 15rem;
 }
 
 .card-info {
@@ -73,6 +95,11 @@ footer {
   padding: 2rem;
   display: flex;
   justify-content: center;
+}
+
+footer .wrapper {
+  display: flex;
+  justify-content: center;
   gap: 5rem;
 }
 
@@ -80,6 +107,16 @@ footer .social-icons {
   display: flex;
   justify-content: flex-start;
   font-size: 32px;
+}
+
+@media (max-width: 1100px) {
+  header .wrapper {
+    display: block;
+  }
+
+  footer .wrapper {
+    display: block;
+  }
 }
 
 
