@@ -3,7 +3,15 @@
 }
 
 body {
+  margin: 0;
+}
 
+h2 {
+  font-size: 2rem;
+}
+
+h4 {
+  margin: 0;
 }
 
 a, a:visited { 
@@ -24,12 +32,13 @@ img {
 
 header {
   background-color: #0891B2;
-  padding: 2rem;
   display: flex;
-  justify-content: center;
+  width: 100%;
+  padding: 2rem;
 }
 
 header .wrapper {
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,25 +62,25 @@ main {
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
+  font-size: 18px;
 }
 
 main img {
-  height: 200px;
+  height: auto;
   width: 100%;
   object-fit: cover;
   
 }
 
 .projects {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
   gap: 2rem;
 }
 
 .card {
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.4);
-  flex: 1 1 15rem;
+  
 }
 
 .card-info {
@@ -93,13 +102,15 @@ footer {
   background-color: #0891B2;
   color: #FFFFFF;
   padding: 2rem;
-  display: flex;
-  justify-content: center;
+  font-size: 18px;
 }
 
 footer .wrapper {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   gap: 5rem;
 }
 
@@ -109,13 +120,47 @@ footer .social-icons {
   font-size: 32px;
 }
 
-@media (max-width: 1100px) {
+@media (min-width: 750px) and (max-width: 1100px) {
   header .wrapper {
     display: block;
+    position: relative;
+  }
+
+  header img {
+    float: left;
+    position: relative;
+    top: -20px;
+    left: -20px;
+
+  }
+
+  header .about {
+    overflow: visible;
+    margin: 20px;
+  }
+
+}
+
+@media (max-width: 750px) {
+  header .wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  footer {
+    padding: 0;
   }
 
   footer .wrapper {
-    display: block;
+    flex-direction: column;
+  }
+
+  footer .contact {
+    padding: 2rem;
   }
 }
 
