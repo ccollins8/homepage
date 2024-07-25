@@ -139,6 +139,10 @@ footer .social-icons {
     margin: 20px;
   }
 
+  footer img {
+    width: 50%;
+  }
+
 }
 
 @media (max-width: 750px) {
